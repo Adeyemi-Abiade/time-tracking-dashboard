@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(226, 43%, 10%);
+    @import url('https://fonts.google.com/specimen/Rubik');
+}
+.grid-container{
+    display: grid;
+    gap: 2em;
+    min-width: 31.25;
+    padding: 3em 2em;
+}
+.flex{
+    display: flex;
+}
+.grid-item{
+    margin: 0 1em;
+}
+.profile{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 1em;
+    flex-direction: column;
+}
+.profile-info{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: hsl(235, 45%, 61%);
+    border-radius: 1em;
+    padding:2em;
+}
+.profile-image{
+    width: 20%;  
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.profile-image img{
+    width: 100%;
+}
+.profile-text{
+    flex-direction: column;
+    color: white;
+
+}
+profile-text p{
+    font-weight: 700;
+}
+profile-text h2{
+    font-size: 2rem;
+}
+.profile .activity-duration{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1em 2em;
+}
+.activity-duration a{
+    text-decoration: none;
+    color: white;
+}
+.work{
+    background-color: hsl(15, 100%, 70%);
+}
+.play{
+    background-color: hsl(195, 74%, 62%);
+}
+.study{
+    background-color: hsl(348, 100%, 68%);
+}
+.exercise{
+    background-color: hsl(145, 58%, 55%);
+}
+.social{
+    background-color: hsl(264, 64%, 52%);
+}
+.self-care{
+    background-color: hsl(43, 84%, 65%);
+}
+
+.work .icon{
+    background-image: url('images/icon-work.svg');
+}
+.play .icon{
+    background-image: url('images/icon-play.svg');
+}
+.study .icon{
+    background-image: url('images/icon-study.svg');
+}
+.exercise .icon{
+    background-image: url('images/icon-exercise.svg');
+}
+.social .icon{
+    background-image: url('images/icon-social.svg');
+}
+.self-care .icon{
+    background-image: url('images/icon-self-care.svg');
+}
+
+.activity{
+    border-radius: 1em;
+    color: white;
+}
+.activity .icon{
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 1.5em;
+}
+.activity-description{
+    background-color: hsl(235, 46%, 20%);
+    padding: 3em 2em;
+    border-radius: 1em;
+    flex-direction: column;
+    gap: 2em;
+}
+.activity-duration, .activity-name-ellipsis{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.previous-record{
+    color: hsl(236, 100%, 87%);
+}
+.present-record{
+    font-size: 2rem;
+}
+.activity-name{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* attribution styles */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+/* Desktop screens */
+@media screen and (min-width: 55em) {
+    .grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        gap: none;
+    }
+    .activity-description{
+        height: 100%;
+    }
+    .activity{
+        overflow-y: hidden;
+    }
+    .profile{
+        grid-row-start: 1;
+        grid-row-end: span 2;
+    }
+    .profile-info{
+        flex-direction: column;
+        align-items:flex-start ;
+        gap: 7em;
+        padding-bottom: 5em;
+    }
+    .profile-info h2{
+        font-size: 2rem;
+    }
+    .activity-duration{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+}
+
+
