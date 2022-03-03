@@ -1,3 +1,4 @@
+/* Default styles */
 *{
     margin:0;
     padding: 0;
@@ -5,9 +6,6 @@
     font-family: 'Rubik', sans-serif;
 }
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: hsl(226, 43%, 10%);
     @import url('https://fonts.google.com/specimen/Rubik');
 }
@@ -19,14 +17,16 @@ background-color: none;
 .grid-container{
     display: grid;
     gap: 2em;
-    min-width: 31.25;
     padding: 3em 2em;
+    overflow-x: auto;
 }
 .flex{
     display: flex;
 }
 .grid-item{
-    margin: 0 1em;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
 }
 
 /* Profile section */
@@ -38,14 +38,13 @@ background-color: none;
 .profile-info{
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     background-color: hsl(246, 80%, 60%);
     border-radius: 1em;
     padding:2em;
 }
 .profile-image{
     width: 20%;  
-    border: 2px solid white;
+    outline: 3px solid white;
     border-radius: 50%;
 }
 .profile-image img{
@@ -58,6 +57,7 @@ background-color: none;
 }
 profile-text p{
     font-weight: 700;
+    color: hsl(236, 100%, 87%);
 }
 profile-text h2{
     font-size: 2rem;
@@ -72,6 +72,7 @@ profile-text h2{
 }
 .profile .activity-duration a:hover{
     color: white;
+    cursor: pointer;
 }
 .profile .activity-duration .current{
     color: white;
@@ -176,17 +177,21 @@ profile-text h2{
         overflow-y: hidden;
     }
     .profile{
+        margin:0;
         grid-row-start: 1;
-        grid-row-end: span 2;
+        grid-row-end: 3;
     }
     .profile-info{
         flex-direction: column;
         align-items:flex-start ;
-        gap: 7em;
+        gap: 2em;
         padding-bottom: 5em;
     }
     .profile-info h2{
         font-size: 2rem;
+    }
+    .profile-image{
+        width: 30%;
     }
     .activity-duration{
         flex-direction: column;
@@ -196,8 +201,7 @@ profile-text h2{
         padding-top: 2em;
     }
     .profile .activity-duration a{
-        margin-bottom: 3em;
-        
+        margin-bottom: 2em;
     }
 }
 
