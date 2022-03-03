@@ -158,7 +158,7 @@ profile-text h2{
 
 
 /* attribution styles */
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 0.8em; text-align: center; margin-top: 3em; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
