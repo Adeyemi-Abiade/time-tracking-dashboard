@@ -11,6 +11,11 @@ body{
     background-color: hsl(226, 43%, 10%);
     @import url('https://fonts.google.com/specimen/Rubik');
 }
+a{
+text-decoration: none;
+color: none;
+background-color: none;
+}
 .grid-container{
     display: grid;
     gap: 2em;
@@ -23,6 +28,8 @@ body{
 .grid-item{
     margin: 0 1em;
 }
+
+/* Profile section */
 .profile{
     background-color: hsl(235, 46%, 20%);
     border-radius: 1em;
@@ -32,7 +39,7 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background-color: hsl(235, 45%, 61%);
+    background-color: hsl(246, 80%, 60%);
     border-radius: 1em;
     padding:2em;
 }
@@ -60,10 +67,17 @@ profile-text h2{
     flex-wrap: wrap;
     padding: 1em 2em;
 }
-.activity-duration a{
-    text-decoration: none;
+.profile .activity-duration a:not(.current){
+    color: hsl(236, 100%, 87%);
+}
+.profile .activity-duration a:hover{
     color: white;
 }
+.profile .activity-duration .current{
+    color: white;
+}
+
+/* Activitites section */
 .work{
     background-color: hsl(15, 100%, 70%);
 }
@@ -111,12 +125,16 @@ profile-text h2{
     background-repeat: no-repeat;
     padding: 1.5em;
 }
-.activity-description{
+.activity .activity-description{
     background-color: hsl(235, 46%, 20%);
     padding: 3em 2em;
     border-radius: 1em;
     flex-direction: column;
     gap: 2em;
+}
+.activity .activity-description:hover{
+    background-color: hsl(235, 45%, 61%);
+    cursor: pointer;
 }
 .activity-duration, .activity-name-ellipsis{
     justify-content: space-between;
@@ -128,6 +146,9 @@ profile-text h2{
 }
 .present-record{
     font-size: 2rem;
+}
+.activity-name, .present-record{
+    color: white;
 }
 .activity-name{
     font-size: 18px;
@@ -170,7 +191,13 @@ profile-text h2{
     .activity-duration{
         flex-direction: column;
         align-items: flex-start;
-        justify-content: space-around;
+    }
+    .profile .activity-duration{
+        padding-top: 2em;
+    }
+    .profile .activity-duration a{
+        margin-bottom: 3em;
+        
     }
 }
 
